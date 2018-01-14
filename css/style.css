@@ -262,7 +262,7 @@ nav a:last-child {
     }
     .tagline {
         position: relative;
-        top: 40px;
+        top: 20px;
         width: 100%;
     }
     .tagline h1 {
@@ -283,7 +283,7 @@ nav a:last-child {
     }
     .bridget {
         background-size: 100%;
-        top: 162px;
+        top: 142px;
         background-position: 0;
     }
     .grd {
