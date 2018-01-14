@@ -39,6 +39,10 @@ table {
     box-sizing: border-box;
 }
 
+strong {
+    font-weight: 700;
+}
+
 html, body {
     font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
     font-size: 1em;
@@ -106,7 +110,7 @@ nav a:last-child {
 }
 
 .tagline h1 {
-    line-height: 1.3;
+    line-height: 1.15;
     font-weight: 900;
     font-size: 3em;
     text-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
@@ -114,38 +118,23 @@ nav a:last-child {
 }
 
 .tagline h2 {
-    margin-bottom: 1em;
+    color: #093e46;
 }
 
-.btn, .hollow {
-    border-radius: 2px;
-    text-transform: uppercase;
-    font-weight: 700;
-    padding: 0.5em 1em;
-    font-size: 0.875em;
-    text-decoration: none;
-    background: #ffd100;
-    color: #354a4d;
-    border: 2px solid transparent;
-    transition: all 0.2s;
+.ck_form.ck_naked .ck_subscribe_button {
+    border-radius: 2px !important;
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+    padding: 0.5em 1em !important;
+    font-size: 0.875em !important;
+    background: #ffd100 !important;
+    color: #354a4d !important;
+    transition: all 0.2s !important;
+    font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
 }
 
-.btn:hover {
-    background: #ffde00;
-}
-
-.hollow {
-    background: transparent;
-    border: 2px solid #fff;
-    color: #FFF;
-    font-weight: 400;
-    margin-left: 1em;
-}
-
-.hollow:hover {
-    background: #FFF;
-    color: #354a4d;
-    transition: all 0.2s;
+.ck_form.ck_naked .ck_subscribe_button:hover {
+    background: #ffde00 !important;
 }
 
 .bridget {
@@ -166,22 +155,40 @@ nav a:last-child {
     z-index: 2;
 }
 
-.content {
-    padding: 1em;
+.ck_form.ck_naked .ck_form_fields {
+    padding: 0 !important;
 }
 
-.card {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-    border-radius: 2px;
-    color: rgba(16, 16, 16, 0.88);
-    padding: 3em;
+.ck_form.ck_naked input[type="text"], .ck_form.ck_naked input[type="email"] {
+    width: 50% !important;
+    font-size: 0.875em !important;
+    font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
+    border: 0 !important;
+    margin-right: 0 !important;
+    border-radius: 2px !important;
+    padding: 10px !important;
+    height: auto !important;
 }
 
-.card h1 {
-    color: #189dad;
-    font-weight: 700;
-    font-size: 1.250em;
-    padding-bottom: 0.5em;
+.ck_form.ck_naked input[type="email"] {
+    margin-left: 5px !important;
+}
+
+.ck_control_group.ck_email_field_group {
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+#ck_success_msg {
+    padding: 10px !important;
+    border: 0 !important;
+    border-radius: 2px !important;
+    color: #354a4d !important;
+    background: #ffd100 !important;
+    font-size: 0.875em !important;
+    line-height: normal !important;
 }
 
 @media screen and (max-width: 66.750em) {
@@ -235,13 +242,6 @@ nav a:last-child {
         width: 100%;
         background: linear-gradient(to top, rgba(30, 157, 173, 0) 0%, #189dad 100%);
     }
-    .card {
-        padding: 1em;
-        font-size: 0.875em;
-    }
-    .content {
-        padding: 0.75em;
-    }
 }
 
 @media screen and (max-width: 37.5em) {
@@ -264,10 +264,4 @@ nav a:last-child {
     .grd {
         display: none;
     }
-    .content {
-        position: relative;
-        top: 258px;
-    }
 }
-
-@media screen and (max-width: 22em) {}
