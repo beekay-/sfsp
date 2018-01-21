@@ -51,6 +51,10 @@ html, body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+strong {
+    font-weight: 700;
+}
+
 .flex {
     display: -moz-box;
     display: -ms-flexbox;
@@ -70,7 +74,7 @@ header {
 nav {
     font-size: 0.750em;
     text-transform: uppercase;
-    padding-left: 0.5em;
+    padding-left: 1em;
 }
 
 nav a {
@@ -110,11 +114,13 @@ nav a:last-child {
     font-weight: 900;
     font-size: 3em;
     text-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
-    margin-bottom: 0.25em;
+    margin-bottom: 8px;
 }
 
 .tagline h2 {
-    margin-bottom: 1em;
+    margin-bottom: 16px;
+    font-size: 0.875em;
+    text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn, .hollow {
@@ -128,10 +134,12 @@ nav a:last-child {
     color: #354a4d;
     border: 2px solid transparent;
     transition: all 0.2s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .btn:hover {
-    background: #ffde00;
+    background: #ffed00;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .hollow {
@@ -166,22 +174,147 @@ nav a:last-child {
     z-index: 2;
 }
 
-.content {
+.pattern {
+    background: url('../img/bg-pattern.png');
+    background-size: 50%;
     padding: 1em;
 }
 
+.content {
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 1em 0;
+}
+
 .card {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    background: #FFF;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
     border-radius: 2px;
     color: rgba(16, 16, 16, 0.88);
-    padding: 3em;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 1em;
+}
+
+.full {
+    width: 100%;
+    padding: 2em;
+}
+
+.half {
+    width: 50%;
+    padding: 2em;
+}
+
+.third {
+    width: 33.3332%;
+    padding: 2em;
+    text-align: center;
+}
+
+.feature-image {
+    text-align: center;
+    border-radius: 100%;
+}
+
+.feature-image img {
+    border-radius: 100%;
+    margin: 1em 0;
 }
 
 .card h1 {
     color: #189dad;
     font-weight: 700;
     font-size: 1.250em;
-    padding-bottom: 0.5em;
+    width: 100%;
+    line-height: normal;
+    padding-bottom: 1em;
+}
+
+.card h2 {
+    font-size: 0.875em;
+    color: #189dad;
+}
+
+.card p {
+    white-space: pre-line;
+}
+
+.card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.card ol {
+    list-style: decimal;
+    list-style-position: inside;
+    font-weight: 700;
+}
+
+.normal {
+    font-weight: 400;
+}
+
+.card li {
+    white-space: pre-line;
+    margin: 1em 0;
+}
+
+.card li:first-child {
+    margin-top: 0;
+}
+
+.card li:last-child {
+    margin-bottom: 0;
+}
+
+.card li.coin {
+    background: url('../img/mag-coin.png') no-repeat left 6px;
+    background-size: 16px;
+    padding: 0 1.5em;
+    margin: 1.5em 0;
+    width: 50%;
+    font-weight: 700;
+}
+
+.card li.coin:nth-last-child(2), .card li.coin:last-child {
+    margin-top: 0;
+}
+
+.card h3 {
+    margin: 1em 0;
+    font-size: 1.5em;
+    font-family: 'Lora', serif;
+    font-style: italic;
+    line-height: normal;
+    color: #189dad;
+    border-left: 4px solid;
+    padding-left: 0.5em;
+}
+
+/* ICONS */
+
+.mdi {
+    color: #ffd100;
+}
+
+/* UTILITY CLASSES */
+
+.align-vertically {
+    -webkit-align-items: center;
+    align-items: center;
+}
+.padding-right {
+    padding-right: 1.5em;
+}
+.no-bottom-padding {
+    padding-bottom: 0 !important;
+}
+.no-bottom-margin {
+    margin-bottom: 0 !important;
 }
 
 @media screen and (max-width: 66.750em) {
