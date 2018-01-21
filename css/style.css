@@ -139,7 +139,7 @@ nav a:last-child {
 
 .btn:hover {
     background: #ffed00;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 
 .hollow {
@@ -295,10 +295,44 @@ nav a:last-child {
     padding-left: 0.5em;
 }
 
+#reviews img {
+    border-radius: 100%;
+    height: 64px;
+    width: 64px;
+}
+
+#reviews .author {
+    margin-left: 1em;
+}
+
+footer {
+    color: rgba(16, 16, 16, 0.7);
+    font-size: 0.750em;
+    padding: 1.250em;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
 /* ICONS */
 
 .mdi {
+    font-size: 24px;
+}
+.mdi.teal {
+    color: #189dad;
+    padding: 0 3px;
+    transition: color 0.2s;
+}
+.mdi.teal:hover {
+    color: #08d2eb;
+    transition: color 0.2s;
+}
+.mdi.md {
     color: #ffd100;
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+    margin-right: 4px;
 }
 
 /* UTILITY CLASSES */
@@ -306,6 +340,10 @@ nav a:last-child {
 .align-vertically {
     -webkit-align-items: center;
     align-items: center;
+}
+.add-padding {
+    padding: 1.6em 1.6em 0 1.6em;
+    padding-bottom: 0 !important;
 }
 .padding-right {
     padding-right: 1.5em;
