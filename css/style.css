@@ -1,3 +1,5 @@
+/* CSS RESET */
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
@@ -39,6 +41,8 @@ table {
     box-sizing: border-box;
 }
 
+/* MAIN */
+
 html, body {
     font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
     font-size: 1em;
@@ -62,6 +66,8 @@ strong {
     display: flex;
 }
 
+/* NAV */
+
 header {
     -webkit-align-items: center;
     align-items: center;
@@ -83,7 +89,7 @@ nav a {
     text-decoration: none;
     padding: 5px 10px;
     border: 1px solid transparent;
-    border-radius: 2px;
+    border-radius: 3px;
     transition: all 0.2s;
 }
 
@@ -95,6 +101,8 @@ nav a:hover {
 nav a:last-child {
     font-weight: 900;
 }
+
+/* HERO */
 
 .hero {
     align-items: center;
@@ -123,8 +131,28 @@ nav a:last-child {
     text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
 }
 
+.bridget {
+    background: url('../img/bridget-casey.jpg') center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 60%;
+    position: relative;
+    z-index: 1;
+}
+
+.grd {
+    background: linear-gradient(to left, rgba(30, 157, 173, 0) 0%, #189dad 100%);
+    width: 25%;
+    height: 100vh;
+    position: absolute;
+    z-index: 2;
+}
+
+/* BUTTONS */
+
 .btn, .hollow {
-    border-radius: 2px;
+    border-radius: 3px;
     text-transform: uppercase;
     font-weight: 700;
     padding: 0.5em 1em;
@@ -156,23 +184,7 @@ nav a:last-child {
     transition: all 0.2s;
 }
 
-.bridget {
-    background: url('../img/bridget-casey.jpg') center right;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width: 60%;
-    position: relative;
-    z-index: 1;
-}
-
-.grd {
-    background: linear-gradient(to left, rgba(30, 157, 173, 0) 0%, #189dad 100%);
-    width: 25%;
-    height: 100vh;
-    position: absolute;
-    z-index: 2;
-}
+/* CONTENT */
 
 .pattern {
     /* background: #1fa7b8 url('../img/bg-pattern.png'); */
@@ -184,19 +196,210 @@ nav a:last-child {
 
 .content {
     margin: 0 auto;
-    max-width: 940px;
+    max-width: 1060px;
     padding: 1em 0;
 }
 
 .card {
     background: #FFF;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
-    border-radius: 2px;
+    box-shadow: 0 1px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
     color: rgba(16, 16, 16, 0.88);
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin: 1em;
+    overflow: hidden;
 }
+
+.card:before {
+    content: ' ';
+    display: block;
+    background: linear-gradient(to right, #0bd9f4 0%, #189dad 100%);
+    height: 3px;
+    width: 100%;
+}
+
+.feature-image {
+    text-align: center;
+    border-radius: 100%;
+}
+
+.feature-image img {
+    border-radius: 100%;
+    margin: 1em 0;
+}
+
+.card h1 {
+    color: #189dad;
+    font-weight: 700;
+    font-size: 1.5em;
+    width: 100%;
+    line-height: normal;
+    padding-bottom: 1em;
+}
+
+.card h2 {
+    font-size: 1em;
+    color: #189dad;
+}
+
+.card p {
+    white-space: pre-line;
+}
+
+.card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1em 0;
+    font-size: 1.125em;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.card li {
+    white-space: pre-line;
+}
+
+.card li.coin {
+    background: url('../img/mag-coin.png') no-repeat left 5px;
+    background-size: 16px;
+    padding: 0 1.5em;
+    font-weight: 700;
+}
+
+.card ol {
+    list-style: decimal;
+    list-style-position: inside;
+    font-weight: 700;
+}
+
+.card ol li {
+    margin: 1em 0;
+}
+
+.card ol li:first-child {
+    margin-top: 0;
+}
+
+.card ol li:last-child {
+    margin-bottom: 0;
+}
+
+.normal {
+    font-weight: 400;
+}
+
+.card h3 {
+    margin: 1em 0;
+    font-size: 1.5em;
+    font-family: 'Lora', serif;
+    font-style: italic;
+    line-height: normal;
+    color: #189dad;
+    border-left: 4px solid;
+    padding-left: 0.5em;
+}
+
+#enroll {
+    margin: 1em auto;
+    border-radius: 3px;
+    background: linear-gradient(to right, #0bd9f4 0%, #189dad 100%);
+    box-shadow: 0 1px 30px rgba(24, 157, 173, 0.5), inset 0 0 0 2px rgba(0, 0, 0, 0.025);
+}
+
+.users {
+    padding: 2em 1em;
+}
+
+#reviews img {
+    border-radius: 100%;
+    height: 64px;
+    width: 64px;
+}
+
+#reviews .author {
+    margin-left: 1em;
+}
+
+.review {
+    padding: 0 1em;
+}
+
+.review p {
+    font-size: 0.875em;
+}
+
+footer {
+    color: rgba(16, 16, 16, 0.7);
+    font-size: 0.750em;
+    padding: 1.250em;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+/* MODAL */
+
+#overlay {
+    background: rgba(24, 157, 173, 0.8);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    height: 100%;
+}
+
+#modal {
+    height: 80%;
+    width: 80%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #000;
+    box-shadow: 0 9px 46px 8px rgba(0, 0, 0, 0.14), 0 11px 15px -7px rgba(0, 0, 0, 0.12), 0 24px 38px 3px rgba(0, 0, 0, 0.2);
+    transform: translate3d(0, 0, 0);
+    z-index: 2;
+    text-align: center;
+}
+
+#modal iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* ICONS */
+
+.mdi {
+    font-size: 24px;
+}
+
+.mdi.teal {
+    color: #189dad;
+    padding: 0 3px;
+    transition: color 0.2s;
+}
+
+.mdi.teal:hover {
+    color: #08d2eb;
+    transition: color 0.2s;
+}
+
+.mdi.md {
+    font-size: 64px;
+    text-shadow: 0 1px 30px rgba(255, 209, 0, 0.3);
+    color: #ffd100;
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+    margin-right: 4px;
+}
+
+/* GRID */
 
 .full {
     width: 100%;
@@ -214,127 +417,8 @@ nav a:last-child {
     text-align: center;
 }
 
-.feature-image {
-    text-align: center;
-    border-radius: 100%;
-}
-
-.feature-image img {
-    border-radius: 100%;
-    margin: 1em 0;
-}
-
-.card h1 {
-    color: #189dad;
-    font-weight: 700;
-    font-size: 1.250em;
-    width: 100%;
-    line-height: normal;
-    padding-bottom: 1em;
-}
-
-.card h2 {
-    font-size: 0.875em;
-    color: #189dad;
-}
-
-.card p {
-    white-space: pre-line;
-}
-
-.card ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-
-.card ol {
-    list-style: decimal;
-    list-style-position: inside;
-    font-weight: 700;
-}
-
-.normal {
-    font-weight: 400;
-}
-
-.card li {
-    white-space: pre-line;
-    margin: 1em 0;
-}
-
-.card li:first-child {
-    margin-top: 0;
-}
-
-.card li:last-child {
-    margin-bottom: 0;
-}
-
-.card li.coin {
-    background: url('../img/mag-coin.png') no-repeat left 6px;
-    background-size: 16px;
-    padding: 0 1.5em;
-    margin: 1.5em 0;
-    width: 50%;
-    font-weight: 700;
-}
-
-.card li.coin:nth-last-child(2), .card li.coin:last-child {
-    margin-top: 0;
-}
-
-.card h3 {
-    margin: 1em 0;
-    font-size: 1.5em;
-    font-family: 'Lora', serif;
-    font-style: italic;
-    line-height: normal;
-    color: #189dad;
-    border-left: 4px solid;
-    padding-left: 0.5em;
-}
-
-#reviews img {
-    border-radius: 100%;
-    height: 64px;
-    width: 64px;
-}
-
-#reviews .author {
-    margin-left: 1em;
-}
-
-footer {
-    color: rgba(16, 16, 16, 0.7);
-    font-size: 0.750em;
-    padding: 1.250em;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
-}
-
-/* ICONS */
-
-.mdi {
-    font-size: 24px;
-}
-.mdi.teal {
-    color: #189dad;
-    padding: 0 3px;
-    transition: color 0.2s;
-}
-.mdi.teal:hover {
-    color: #08d2eb;
-    transition: color 0.2s;
-}
-.mdi.md {
-    color: #ffd100;
-    vertical-align: middle;
-    position: relative;
-    top: -2px;
-    margin-right: 4px;
+.third.middle {
+    padding: 2em 0;
 }
 
 /* UTILITY CLASSES */
@@ -343,25 +427,65 @@ footer {
     -webkit-align-items: center;
     align-items: center;
 }
+
 .add-padding {
-    padding: 1.6em 1.6em 0 1.6em;
+    padding: 1.334em 1.334em 0 1.334em;
     padding-bottom: 0 !important;
 }
-.add-margins {
-    margin: 2em 1em;
-}
+
 .padding-right {
     padding-right: 1.5em;
 }
+
 .no-bottom-padding {
     padding-bottom: 0 !important;
 }
+
 .no-bottom-margin {
     margin-bottom: 0 !important;
 }
-.bottom-margin-fix {
-    margin-bottom: 4px !important;
+
+/* ANIMATION */
+
+.animated {
+    -webkit-animation-duration: 0.15s;
+    animation-duration: 0.15s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
 }
+
+@-webkit-keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+/* RESPONSIVE MEDIA QUERIES */
 
 @media screen and (max-width: 66.750em) {
     .tagline h1 {
@@ -444,7 +568,7 @@ footer {
         position: relative;
         top: 180px;
     }
-    .content, .padding-right {
+    .padding-right {
         padding: 0;
     }
     .card, .wrap {
@@ -452,23 +576,20 @@ footer {
         flex-wrap: wrap;
         margin: 0;
     }
-    .card li.coin {
-        width: 100%;
-        padding: 0 2em;
-        background-position: 0 3px;
-    }
-    .card li.coin:first-child, .card li.coin:nth-child(1) {
-        margin-bottom: 0;
-    }
     .third, .half {
         width: 100%;
     }
-    .bottom-margin-fix, #author, #reviews, .networks, #benefits {
+    .third.middle {
+        padding: 0 2em;
+    }
+    .bottom-margin-fix, .networks, #benefits {
         margin-bottom: 1em !important;
     }
-    .add-padding-on-mobile {
-        padding: 2em;
-        margin-bottom: 1em;
+    .review:first-of-type {
+        padding-bottom: 1em;
+    }
+    .card li.coin {
+        margin: 0.5em 0;
     }
     .feature-image {
         width: 100%;
@@ -477,6 +598,10 @@ footer {
         text-align: center;
         -webkit-justify-content: center;
         justify-content: center;
+    }
+    #modal {
+        width: 90%;
+        height: 45%;
     }
 }
 
