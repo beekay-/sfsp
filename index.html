@@ -10,7 +10,7 @@
 <title>The Six-Figure Stock Portfolio &bull; Learn to Invest</title>
 <link rel="shortcut icon" href="favicon.png">
 <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,900,Lora:400i">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,900">
 <link rel="stylesheet" href="css/style.css">
 <meta property="og:title" content="The Six-Figure Stock Portfolio">
 <meta property="og:type" content="website">
@@ -104,33 +104,48 @@
             </div>
         </div>
         <div id="enroll" class="content">
-            <div class="full">
-
+            <h1>Enroll now and start investing today.</h1>
+            <h2>Two payment options. Instant and lifetime access!</h2>
+            <div class="flex">
+                <div class="half price">
+                    <h3>$379 USD</h3>
+                    <h4>One easy payment</h4>
+                    <a class="btn" href="#">Enroll Now</a>
+                </div>
+                <div class="half price">
+                    <h3>$199 USD</h3>
+                    <h4>Two easy monthly payments</h4>
+                    <a class="btn" href="#">Enroll Now</a>
+                </div>
             </div>
+            <p><i class="mdi mdi-approval"></i> 14 day money back guarantee. No questions asked.</p>
         </div>
-        <div id="curriculum" class="content flex wrap">
+        <div id="curriculum" class="content">
             <div class="card flex">
                 <h1 class="add-padding">Here’s what you get</h1>
-                <div class="third">
-                    <i class="mdi mdi-creation md"></i>
+                <div class="third no-top-padding">
+                    <i class="mdi mdi-book-open-page-variant md"></i>
                     <div class="title"><strong>30+ hours of exclusive content</strong></div>
-                    Text, video, spreadsheets, and workbooks to walk you through on building an investing portfolio that earns you money.
+                    Lessons, videos, spreadsheets, and workbooks to walk you through on building an investing portfolio that earns you money.
                 </div>
-                <div class="third middle">
-                    <i class="mdi mdi-youtube-tv md"></i>
+                <div class="third middle no-top-padding">
+                    <i class="mdi mdi-theater md"></i>
                     <div class="title"><strong>Four LIVE online master classes</strong></div>
                     Student-only webinars cover specific investing topics such as All About Dividends, Introduction to Technical Analysis, Making a Trading Plan, and Building & Rebalancing Your Portfolio.
                 </div>
-                <div class="third">
+                <div class="third no-top-padding">
                     <i class="mdi mdi-school md"></i>
                     <div class="title"><strong>Access to “The Six-Figure Study Hall”</strong></div>
                     Private Facebook group where you can share strategies, ask questions, and connect with other students of the course.
+                </div>
+                <div class="flex full no-top-padding align-horizontally">
+                    <a class="btn" href="#">Preview Curriculum</a>
                 </div>
             </div>
         </div>
         <div id="reviews" class="content">
             <div class="card">
-                <h1 class="add-padding">What people are saying</h1>
+                <h1 class="add-padding">What people are saying <i class="mdi mdi-star yellow"></i><i class="mdi mdi-star yellow"></i><i class="mdi mdi-star yellow"></i><i class="mdi mdi-star yellow"></i><i class="mdi mdi-star yellow"></i></h1>
                 <div class="users flex wrap">
                     <div class="half review">
                         <div class="flex">
@@ -146,7 +161,7 @@
                             <img src="http://via.placeholder.com/64x64" alt="Image">
                             <div class="author">
                                 <h2>Bilal Karim</h2>
-                                <p>Bridget provides the best tips & strategies for someone like myself who recently started investing in the stock market. There’s nothing quiet like this course. I highly recommend it!</p>
+                                <p>Bridget provides the best tips & strategies for someone like myself who recently started investing in the stock market. There’s nothing quiet like this course. I highly recommend it.</p>
                             </div>
                         </div>
                     </div>
@@ -168,6 +183,9 @@
                             </div>
                         </div>
                     </div> -->
+                </div>
+                <div class="flex full no-top-padding align-horizontally">
+                    <a class="btn" href="#">View All Reviews</a>
                 </div>
             </div>
         </div>
@@ -260,7 +278,7 @@ $(document).ready(function () {
             overlay.id = 'overlay';
             modal.id = 'modal';
             modal.className = 'animated fadeInUp visible';
-            modal.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/szEoVvtNhrc?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+            modal.innerHTML = '<iframe src="https://www.youtube.com/embed/szEoVvtNhrc?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
             document.body.appendChild(overlay);
             overlay.appendChild(modal);
             e.preventDefault();

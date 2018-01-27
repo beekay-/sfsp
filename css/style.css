@@ -162,7 +162,8 @@ nav a:last-child {
     color: #354a4d;
     border: 2px solid transparent;
     transition: all 0.2s;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
 }
 
 .btn:hover {
@@ -288,22 +289,49 @@ nav a:last-child {
     font-weight: 400;
 }
 
-.card h3 {
-    margin: 1em 0;
-    font-size: 1.5em;
-    font-family: 'Lora', serif;
-    font-style: italic;
-    line-height: normal;
-    color: #189dad;
-    border-left: 4px solid;
-    padding-left: 0.5em;
-}
-
 #enroll {
+    text-align: center;
     margin: 1em auto;
+    padding: 2em;
     border-radius: 3px;
     background: linear-gradient(to right, #0bd9f4 0%, #189dad 100%);
-    box-shadow: 0 1px 30px rgba(24, 157, 173, 0.5), inset 0 0 0 2px rgba(0, 0, 0, 0.025);
+    box-shadow: 0 1px 30px rgba(24, 157, 173, 0.75), inset 0 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+#enroll h1 {
+    font-size: 2em;
+    font-weight: 900;
+    text-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+#enroll h2 {
+    font-size: 1.125em;
+    color: #093e45;
+    text-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    font-weight: 700;
+}
+
+#enroll h3 {
+    font-weight: 900;
+    font-size: 1.375em;
+    text-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+#enroll h4 {
+    padding-bottom: 0.75em;
+    color: #093e45;
+    font-size: 0.875em;
+    text-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.half.price {
+    border-left: 2px solid rgba(0, 0, 0, 0.05);
+    margin: 2em 0;
+    padding: 0;
+    align-items: center;
+}
+.half.price:first-of-type {
+    border: 0;
 }
 
 .users {
@@ -320,7 +348,7 @@ nav a:last-child {
     margin-left: 1em;
 }
 
-.review {
+.half.review {
     padding: 0 1em;
 }
 
@@ -376,6 +404,9 @@ footer {
 
 .mdi {
     font-size: 24px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
 }
 
 .mdi.teal {
@@ -397,6 +428,9 @@ footer {
     position: relative;
     top: -2px;
     margin-right: 4px;
+}
+.yellow {
+    color: #ffd100;
 }
 
 /* GRID */
@@ -428,6 +462,11 @@ footer {
     align-items: center;
 }
 
+.align-horizontally {
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
 .add-padding {
     padding: 1.334em 1.334em 0 1.334em;
     padding-bottom: 0 !important;
@@ -439,6 +478,10 @@ footer {
 
 .no-bottom-padding {
     padding-bottom: 0 !important;
+}
+
+.no-top-padding {
+    padding-top: 0 !important;
 }
 
 .no-bottom-margin {
