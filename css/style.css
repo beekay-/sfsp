@@ -59,6 +59,10 @@ strong {
     font-weight: 700;
 }
 
+strong.extra {
+    font-weight: 900;
+}
+
 .flex {
     display: -moz-box;
     display: -ms-flexbox;
@@ -241,7 +245,7 @@ nav a:nth-last-child(2) {
 
 .content {
     margin: 0 auto;
-    max-width: 1060px;
+    max-width: 1068px;
     padding: 1em 0;
 }
 
@@ -270,7 +274,9 @@ nav a:nth-last-child(2) {
 
 .feature-image img {
     border-radius: 100%;
+    display: inline-block;
     margin: 1em 0;
+    text-align: center;
 }
 
 .card h1 {
@@ -331,6 +337,22 @@ nav a:nth-last-child(2) {
 
 .normal {
     font-weight: 400;
+}
+
+#more-details img {
+    width: 100%;
+    display: block;
+}
+
+.half.details {
+    padding: 0;
+    margin: 0 1em;
+}
+.half.details:first-child {
+    margin-left: 0;
+}
+.half.details:last-child {
+    margin-right: 0;
 }
 
 #enroll {
@@ -757,6 +779,12 @@ footer {
     }
     .third.middle {
         padding: 0 2em;
+    }
+    .half.details {
+        margin: 0;
+    }
+    .half.details:first-child {
+        margin-bottom: 2em;
     }
     .bottom-margin-fix, .networks {
         margin-bottom: 1em !important;
