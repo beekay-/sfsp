@@ -75,22 +75,28 @@ header {
     position: absolute;
     top: 0;
     z-index: 2;
+    color: #FFF;
+    width: 100%;
 }
 
 nav {
     font-size: 0.750em;
     text-transform: uppercase;
-    padding-left: 1em;
+    width: 100%;
+    align-items: center;
+    align-content: center;
 }
 
 nav a {
     font-weight: 700;
-    color: #FFF;
+    color: inherit;
     text-decoration: none;
     padding: 5px 10px;
+    margin: 0 5px;
     border: 1px solid transparent;
     border-radius: 3px;
     transition: all 0.2s;
+    display: inline-block;
 }
 
 nav a:hover {
@@ -98,8 +104,36 @@ nav a:hover {
     transition: all 0.2s;
 }
 
-nav a:last-child {
+nav a:nth-last-child(2) {
     font-weight: 900;
+}
+
+#enroll-option {
+    margin-left: 5px;
+}
+
+#enroll-option.hide {
+    display: none;
+}
+
+#sign-in.hide {
+    display: none;
+}
+
+.sticky-header {
+    width: 100%;
+    padding: 1em;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+.sticky-header.fixed {
+    background: #fff;
+    color: #189dad;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 /* HERO */
@@ -135,7 +169,7 @@ nav a:last-child {
     background: url('../img/bridget-casey.jpg') center right;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 95vh;
     width: 60%;
     position: relative;
     z-index: 1;
@@ -144,7 +178,7 @@ nav a:last-child {
 .grd {
     background: linear-gradient(to left, rgba(30, 157, 173, 0) 0%, #189dad 100%);
     width: 25%;
-    height: 100vh;
+    height: 95vh;
     position: absolute;
     z-index: 2;
 }
@@ -164,6 +198,11 @@ nav a:last-child {
     transition: all 0.2s;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     display: inline-block;
+}
+
+.btn.sm {
+    border: 2px solid transparent;
+    font-size: 1em;
 }
 
 .btn:hover {
@@ -330,6 +369,7 @@ nav a:last-child {
     padding: 0;
     align-items: center;
 }
+
 .half.price:first-of-type {
     border: 0;
 }
@@ -354,6 +394,19 @@ nav a:last-child {
 
 .review p {
     font-size: 0.875em;
+}
+
+.card h1#stars {
+    width: auto;
+    display: inline-block;
+}
+
+.card h1#stars:after {
+    font-family: 'Material Design Icons';
+    font-size: 0.813em;
+    content: '\F4CE \F4CE \F4CE \F4CE \F4CE';
+    color: #ffd100;
+    margin-left: 0.25em;
 }
 
 footer {
@@ -429,6 +482,7 @@ footer {
     top: -2px;
     margin-right: 4px;
 }
+
 .yellow {
     color: #ffd100;
 }
@@ -528,6 +582,37 @@ footer {
     animation-name: fadeInUp;
 }
 
+@-webkit-keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
+
 /* RESPONSIVE MEDIA QUERIES */
 
 @media screen and (max-width: 66.750em) {
@@ -588,8 +673,18 @@ footer {
 }
 
 @media screen and (max-width: 37.5em) {
+    .sticky-header {
+        justify-content: center;
+    }
     nav {
-        display: none;
+        font-size: 0.625em;
+    }
+    nav a {
+        margin: 0;
+    }
+    .justify {
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
     }
     .hero, header {
         background: linear-gradient(to right, rgb(2, 163, 181) 0%, #07acc1 15%, #2db9ce 50%, #0fb3c5 80%, #07adc1 90%, #14aac3 100%)
@@ -625,7 +720,7 @@ footer {
     .third.middle {
         padding: 0 2em;
     }
-    .bottom-margin-fix, .networks, #benefits {
+    .bottom-margin-fix, .networks {
         margin-bottom: 1em !important;
     }
     .review:first-of-type {
@@ -636,6 +731,14 @@ footer {
     }
     .feature-image {
         width: 100%;
+    }
+    #enroll h1 {
+        font-size: 1.5em;
+        padding-bottom: 0.5em;
+        line-height: normal;
+    }
+    #enroll h2, #enroll p {
+        line-height: normal;
     }
     footer {
         text-align: center;

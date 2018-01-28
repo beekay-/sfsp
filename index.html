@@ -29,13 +29,16 @@
         <div class="logo">
             <img src="img/logo.svg" alt="Six-Figure Stock Portfolio Logo" height="78">
         </div>
-        <nav>
-            <a href="#course">Course</a>
-            <a href="#curriculum">Curriculum</a>
-            <a href="#reviews">Reviews</a>
-            <a href="#faq">FAQ</a>
-            <a href="http://moneyaftergraduation.thinkific.com/users/sign_in">Sign In</a>
-        </nav>
+        <div class="sticky-header align-vertically">
+            <nav class="flex wrap">
+                <a href="#course">Course</a>
+                <a href="#curriculum">Curriculum</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#faq">FAQ</a>
+                <a id="sign-in" href="http://moneyaftergraduation.thinkific.com/users/sign_in">Sign In</a>
+                <a id="enroll-option" class="btn sm hide" href="#enroll">Enroll</a>
+            </nav>
+        </div>
     </header>
     <div class="hero flex">
         <div class="tagline flex">
@@ -109,7 +112,7 @@
             <div class="flex">
                 <div class="half price">
                     <h3>$379 USD</h3>
-                    <h4>One easy payment</h4>
+                    <h4>One time easy payment</h4>
                     <a class="btn" href="#">Enroll Now</a>
                 </div>
                 <div class="half price">
@@ -145,7 +148,7 @@
         </div>
         <div id="reviews" class="content">
             <div class="card">
-                <h1 class="add-padding">What people are saying <i class="mdi mdi-star yellow"></i><i class="mdi mdi-star yellow"></i><i class="mdi mdi-star yellow"></i><i class="mdi mdi-star yellow"></i><i class="mdi mdi-star yellow"></i></h1>
+                <h1 id="stars" class="add-padding">What people are saying</h1>
                 <div class="users flex wrap">
                     <div class="half review">
                         <div class="flex">
@@ -247,51 +250,6 @@
         </footer>
     </div>
 <script src="js/jquery.min.js"></script>
-<script>
-$(document).ready(function () {
-    // Scroll To Div
-    $('a[href*=#]:not([href=#])').click(function () {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//,
-                '') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            if (target.length) {
-                if (target.selector === '#enroll') {
-                    $('html, body').animate({
-                        scrollTop: target.offset().top - 20
-                    }, 350);
-                } else {
-                    $('html, body').animate({
-                        scrollTop: target.offset().top - 0
-                    }, 350);
-                    return false;
-                }
-            }
-        }
-    });
-
-    var overlay = document.createElement('div');
-    var modal = document.createElement('div');
-    var vidBtn = document.getElementById('watch-video');
-    if (vidBtn) {
-        vidBtn.onclick = function(e) {
-            overlay.id = 'overlay';
-            modal.id = 'modal';
-            modal.className = 'animated fadeInUp visible';
-            modal.innerHTML = '<iframe src="https://www.youtube.com/embed/szEoVvtNhrc?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
-            document.body.appendChild(overlay);
-            overlay.appendChild(modal);
-            e.preventDefault();
-        };
-    }
-    overlay.onclick = function() {
-        this.parentElement.removeChild(overlay);
-        this.removeChild(modal);
-    };
-    modal.onclick = function(event) {
-        event.stopPropagation();
-    };
-});
-</script>
+<script src="js/site.js"></script>
 </body>
 </html>
