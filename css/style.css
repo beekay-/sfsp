@@ -122,7 +122,7 @@ nav a:nth-last-child(2) {
 
 .sticky-header {
     width: 100%;
-    padding: 1em;
+    padding: 0.5em;
     -webkit-justify-content: space-between;
     justify-content: space-between;
 }
@@ -134,6 +134,10 @@ nav a:nth-last-child(2) {
     top: 0;
     left: 0;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-nav {
+    display: none;
 }
 
 /* HERO */
@@ -203,6 +207,7 @@ nav a:nth-last-child(2) {
 .btn.sm {
     border: 2px solid transparent;
     font-size: 1em;
+    padding: 0.3em 0.75em;
 }
 
 .btn:hover {
@@ -628,11 +633,19 @@ footer {
 }
 
 @media screen and (max-width: 48em) {
+    .tagline {
+        width: 55%;
+        padding: 4em 0 1em 1em;
+    }
     .tagline h1 {
         font-size: 2em;
     }
     .grd {
-        width: 50%;
+        width: 30%;
+        height: 45vh;
+    }
+    .bridget {
+        height: 45vh;
     }
 }
 
@@ -660,6 +673,7 @@ footer {
         position: absolute;
         top: 180px;
         z-index: 0;
+        height: 95vh;
     }
     .grd {
         height: 250px;
@@ -672,9 +686,33 @@ footer {
     }
 }
 
-@media screen and (max-width: 37.5em) {
+@media screen and (max-width: 25.875em) {
+    header {
+        padding: 0.5em 1em 0 1em;
+    }
+    .logo img {
+        width: 85px;
+    }
     .sticky-header {
+        -webkit-justify-content: center;
         justify-content: center;
+    }
+    .desktop-nav.hide {
+        display: none;
+    }
+    .mobile-nav {
+        padding: 0.5em;
+        display: block;
+        background: #117d8a;
+    }
+    .mobile-nav nav a:nth-last-child(2) {
+        font-weight: 700;
+    }
+    .mobile-nav nav a:nth-last-child(1) {
+        font-weight: 900;
+    }
+    .mobile-nav a:hover {
+        color: #fff;
     }
     nav {
         font-size: 0.625em;
@@ -690,14 +728,14 @@ footer {
         background: linear-gradient(to right, rgb(2, 163, 181) 0%, #07acc1 15%, #2db9ce 50%, #0fb3c5 80%, #07adc1 90%, #14aac3 100%)
     }
     .tagline h1 {
-        font-size: 2em;
+        font-size: 1.625em;
     }
     .tagline h2, .btn {
         font-size: 0.750em;
     }
     .bridget {
         background-size: 100%;
-        top: 100px;
+        top: 50px;
     }
     .grd {
         display: none;
@@ -732,6 +770,9 @@ footer {
     .feature-image {
         width: 100%;
     }
+    #enroll {
+        padding: 2em 1em;
+    }
     #enroll h1 {
         font-size: 1.5em;
         padding-bottom: 0.5em;
@@ -739,6 +780,10 @@ footer {
     }
     #enroll h2, #enroll p {
         line-height: normal;
+        font-size: 0.875em;
+    }
+    #enroll h4 {
+        font-size: 0.750em;
     }
     footer {
         text-align: center;
@@ -751,4 +796,33 @@ footer {
     }
 }
 
-@media screen and (max-width: 22em) {}
+@media screen and (max-width: 23.5em) {
+    .bridget {
+        background-size: 100%;
+        top: 110px;
+    }
+    #enroll h1 {
+        font-size: 2em;
+    }
+    #enroll h2, #enroll p {
+        font-size: 1.125em;
+    }
+    #enroll h4 {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 22em) {
+    nav {
+        font-size: 0.568em;
+    }
+    .bridget {
+        top: 180px;
+    }
+    #enroll h4 {
+        font-size: 0.813em;
+    }
+    #enroll {
+        padding: 2em 1em;
+    }
+}
