@@ -267,6 +267,11 @@ nav a:nth-last-child(2) {
     width: 100%;
 }
 
+#benefits .feature-image img {
+    height: 140px;
+    width: 140px;
+}
+
 .feature-image {
     text-align: center;
     border-radius: 100%;
@@ -290,7 +295,6 @@ nav a:nth-last-child(2) {
 
 .card h2 {
     font-size: 1em;
-    color: #189dad;
 }
 
 .card p {
@@ -416,6 +420,11 @@ nav a:nth-last-child(2) {
 
 #reviews .author {
     margin-left: 1em;
+}
+
+#reviews h2 {
+    color: #189dad;
+    font-weight: 700;
 }
 
 .half.review {
