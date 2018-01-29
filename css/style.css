@@ -406,9 +406,12 @@ nav a:nth-last-child(2) {
 }
 
 #reviews img {
-    border-radius: 100%;
+    border-radius: 64px;
     height: 64px;
     width: 64px;
+    border: 2px solid rgba(24, 157, 173, 0.75);
+    display: flex;
+    object-fit: cover;
 }
 
 #reviews .author {
