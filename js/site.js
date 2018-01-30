@@ -73,6 +73,7 @@ $(document).ready(function() {
     if (vidBtn) {
         vidBtn.onclick = function(e) {
             overlay.id = 'overlay';
+            overlay.className = '';
             modal.id = 'modal';
             modal.className = 'animated fadeInUp visible';
             modal.innerHTML = '<iframe src="https://www.youtube.com/embed/szEoVvtNhrc?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
@@ -85,18 +86,9 @@ $(document).ready(function() {
     if (curriculumBtn) {
         curriculumBtn.onclick = function(e) {
             overlay.id = 'overlay';
-            overlay.style.background = 'rgba(255, 255, 255, 0.8)';
-            overlay.style.borderRadius = '3px';
+            overlay.className = 'fixed';
             modal.id = 'modal';
-            modal.style.borderRadius = '3px';
-            modal.className = 'animated fadeInUp visible';
-            modal.style.textAlign = 'left';
-            modal.style.padding = '1em';
-            modal.style.background = '#fff';
-            modal.style.color = '#101010';
-            modal.style.overflow = 'scroll';
-            modal.style.height = '310px';
-            modal.style.width = '310px';
+            modal.className = 'animated fadeInUp visible info';
             modal.innerHTML =
             '<div class="section"><h1><strong>1. Introduction to The Six-Figure Stock Portfolio</strong></h1>' +
             '<h2>Welcome!</h2>' +
@@ -182,60 +174,51 @@ $(document).ready(function() {
     if (reviewsBtn) {
         reviewsBtn.onclick = function(e) {
             overlay.id = 'overlay';
-            overlay.style.background = 'rgba(255, 255, 255, 0.8)';
-            overlay.style.borderRadius = '3px';
+            overlay.className = 'fixed';
             modal.id = 'modal';
-            modal.style.borderRadius = '3px';
-            modal.className = 'animated fadeInUp visible';
-            modal.style.textAlign = 'left';
-            modal.style.padding = '1em';
-            modal.style.background = '#fff';
-            modal.style.color = '#101010';
-            modal.style.overflow = 'scroll';
-            modal.style.height = '310px';
-            modal.style.width = '310px';
+            modal.className = 'animated fadeInUp visible info-lg';
             modal.innerHTML =
-            '<div class="author">' +
+            '<div>' +
                 '<h2>Deidre Cross</h2>' +
-                '<p>The Six-Figure Stock Portfolio has packaged everything in a simple straight forward way for me to understand. I have so much more confidence with my portfolio now and I can actually explain what I am m doing and why I am doing it. This e-course has already paid for itself and will continue to over and over just based off the changes I have made to my portfolio.</p>' +
+                '<p>The Six-Figure Stock Portfolio has packaged everything in a simple straight forward way for me to understand. I have so much more confidence with my portfolio now and I can actually explain what I am doing and why I am doing it. This e-course has already paid for itself and will continue to over and over just based off the changes I have made to my portfolio.</p>' +
             '</div>' + '<br />' +
-            '<div class="author">' +
+            '<div>' +
                 '<h2>Amanda Droeske</h2>' +
                 '<p>I definitely recommend this course for those who want to make the leap into DIY investing, but need a bit of a push to do so. It has been well worth every penny so far.</p>' +
             '</div>' + '<br />' +
-            '<div class="author">' +
+            '<div>' +
                 '<h2>Aundre Blake</h2>' +
                 '<p>I went from knowing absolutely nothing about the stock market to having sound knowledge on how to build long term wealth. Bridget not only breaks it down in an easy to understand manner but in a way that gets you excited to get started. I would recommend this course to anyone that has thought about getting into trading but too scared to take that leap.</p>' +
             '</div>' + '<br />' +
-            '<div class="author">' +
+            '<div>' +
                 '<h2>Bilal Karim</h2>' +
                 '<p>Bridget provides the best tips & strategies for someone like myself who recently started investing in the stock market. There’s nothing quiet like this course. I highly recommend it.</p>' +
             '</div>' + '<br />' +
-            '<div class="author">' +
+            '<div>' +
                 '<h2>Jessica Bihari</h2>' +
                 '<p>The course was very reasonably priced and gave me the push I needed to open a DIY investment account. Bridget gave the proper education and tips to make me feel confident!</p>' +
             '</div>' + '<br />' +
-            '<div class="author">' +
+            '<div>' +
                 '<h2>Carol Casey</h2>' +
                 '<p>Because of this course, I am confident in the stock market, have created a passive income that pays me every month. I will NEVER pay anyone to manage my money again. The course has literally paid for itself and I’m still making money.</p>' +
             '</div>' + '<br />' +
-            '<div class="author">' +
+            '<div>' +
                 '<h2>Dace Lawrence</h2>' +
                 '<p>An excellent program for the novice investor or those looking to get into some solid wealth building. Would have liked this program more had it been around 30 years ago!</p>' +
             '</div>' + '<br />' +
-            '<div class="author">' +
+            '<div>' +
                 '<h2>Josh Overmyer</h2>' +
                 '<p>Content is well organized, and Bridget gives easy-to-understand examples for all of the lessons. The structure allows each student to set their own pace, be that extended over several weeks or consumed all in one sitting.</p>' +
             '</div>' + '<br />' +
-            '<div class="author">' +
+            '<div>' +
                 '<h2>Alyssa Fischer</h2>' +
                 '<p>Not only is The Six-Figure Stock Portfolio worth more than its cost, it is also the most useful and practical investing course I have taken or been able to find. Plus, you will never regret investing in your future self.</p>' +
             '</div>' + '<br />' +
-            '<div class="author">' +
+            '<div>' +
                 '<h2>Mallika Sen</h2>' +
                 '<p>As someone who really likes studying this material and is prone to a great deal of analysis paralysis, I think this course helped pull me out of the research rabbit-hole just enough to develop more concrete plans.</p>' +
             '</div>' + '<br />' +
-            '<div class="author">' +
+            '<div>' +
                 '<h2>Natasha Tekeste</h2>' +
                 '<p>Bridget and this program are awesome! Would highly recommend!</p>' +
             '</div>';
