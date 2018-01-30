@@ -247,6 +247,7 @@ nav a:nth-last-child(2) {
     margin: 0 auto;
     max-width: 1068px;
     padding: 1em 0;
+    position: relative;
 }
 
 .card {
@@ -352,11 +353,26 @@ nav a:nth-last-child(2) {
     padding: 0;
     margin: 0 1em;
 }
+
 .half.details:first-child {
     margin-left: 0;
 }
+
 .half.details:last-child {
     margin-right: 0;
+}
+
+#curriculum .section {
+    margin-bottom: 1em;
+}
+
+#curriculum .section:last-child {
+    margin-bottom: 0;
+}
+
+#curriculum .section h2 {
+    font-size: 0.813em;
+    color: rgba(16, 16, 16, 0.7);
 }
 
 #enroll {
@@ -392,6 +408,14 @@ nav a:nth-last-child(2) {
     color: #093e45;
     font-size: 0.875em;
     text-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+#enroll p {
+    text-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+#enroll p.footnote {
+    font-size: 0.750em;
 }
 
 .half.price {
@@ -499,6 +523,10 @@ footer {
     vertical-align: middle;
     position: relative;
     top: -1px;
+}
+
+.mdi.sm {
+    font-size: 14px;
 }
 
 .mdi.teal {
