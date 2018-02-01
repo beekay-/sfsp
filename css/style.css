@@ -460,7 +460,7 @@ nav a:nth-last-child(2) {
 }
 
 footer {
-    color: rgba(16, 16, 16, 0.7);
+    background: #189dad;
     font-size: 0.750em;
     padding: 1.250em;
     -webkit-justify-content: space-between;
@@ -891,9 +891,12 @@ footer {
     .grd {
         display: none;
     }
-    .pattern {
+    .pattern, footer {
         position: relative;
         top: 180px;
+    }
+    #faq.content {
+        padding-bottom: 0;
     }
     .padding-right {
         padding: 0;
