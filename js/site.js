@@ -40,7 +40,7 @@ $(document).ready(function() {
     }
 
     // Set the date we're counting down to
-    var countDownDate = new Date("Feb 17, 2018 23:59:59").getTime();
+    var countDownDate = new Date("Feb 4, 2018 23:59:59").getTime();
 
     // Update the count down every 1 second
     var x = setInterval(function() {
@@ -82,11 +82,22 @@ $(document).ready(function() {
             e.preventDefault();
         };
     }
+    // Notify Me Modal
+    $('.notify').click(function(e) {
+        overlay.id = 'overlay';
+        overlay.className = '';
+        modal.id = 'modal';
+        modal.className = 'animated fadeInUp visible info-sm';
+        document.body.appendChild(overlay);
+        overlay.appendChild(modal);
+        $('#modal').append("<script async id='_ck_246643' src='https://forms.convertkit.com/246643?v=6'></script>");
+        e.preventDefault();
+    });
     // Curriculum Button
     if (curriculumBtn) {
         curriculumBtn.onclick = function(e) {
             overlay.id = 'overlay';
-            overlay.className = 'fixed';
+            // overlay.className = 'fixed';
             modal.id = 'modal';
             modal.className = 'animated fadeInUp visible info';
             modal.innerHTML =
@@ -168,13 +179,13 @@ $(document).ready(function() {
             document.getElementById('curriculum').appendChild(overlay);
             overlay.appendChild(modal);
             e.preventDefault();
-            $('html,body').animate({ scrollTop: $("#curriculum").offset().top - 50 });
+            // $('html,body').animate({ scrollTop: $("#curriculum").offset().top - 50 });
         }
     }
     if (reviewsBtn) {
         reviewsBtn.onclick = function(e) {
             overlay.id = 'overlay';
-            overlay.className = 'fixed';
+            // overlay.className = 'fixed';
             modal.id = 'modal';
             modal.className = 'animated fadeInUp visible info-lg';
             modal.innerHTML =
@@ -199,7 +210,7 @@ $(document).ready(function() {
                 '<p>The course was very reasonably priced and gave me the push I needed to open a DIY investment account. Bridget gave the proper education and tips to make me feel confident!</p>' +
             '</div>' + '<br />' +
             '<div>' +
-                '<h2>Carol Casey</h2>' +
+                '<h2>Carol Lynn</h2>' +
                 '<p>Because of this course, I am confident in the stock market, have created a passive income that pays me every month. I will NEVER pay anyone to manage my money again. The course has literally paid for itself and I’m still making money.</p>' +
             '</div>' + '<br />' +
             '<div>' +
@@ -226,7 +237,7 @@ $(document).ready(function() {
             document.getElementById('reviews').appendChild(overlay);
             overlay.appendChild(modal);
             e.preventDefault();
-            $('html,body').animate({ scrollTop: $("#reviews").offset().top - 50 });
+            // $('html,body').animate({ scrollTop: $("#reviews").offset().top - 50 });
         }
     }
     overlay.onclick = function() {
@@ -257,8 +268,8 @@ $(document).ready(function() {
             },
             {
                 "review": "Because of this course, I am confident in the stock market, have created a passive income that pays me every month. I will NEVER pay anyone to manage my money again. The course has literally paid for itself and I’m still making money.",
-                "source": "Carol Casey",
-                "img": 'img/carol-casey.jpg'
+                "source": "Carol Lynn",
+                "img": 'img/carol-lynn.jpg'
             },
             {
                 "review": "An excellent program for the novice investor or those looking to get into some solid wealth building. Would have liked this program more had it been around 30 years ago!",

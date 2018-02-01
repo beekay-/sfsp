@@ -11,7 +11,7 @@
 <link rel="shortcut icon" href="favicon.png">
 <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,900">
-<link rel="stylesheet" href="css/style.min.css">
+<link rel="stylesheet" href="css/style.css">
 <meta property="og:title" content="The Six-Figure Stock Portfolio">
 <meta property="og:type" content="website">
 <meta property="og:url" content="http://sixfigurestockportfolio.com">
@@ -31,7 +31,7 @@
             <a href="#curriculum">Curriculum</a>
             <a href="#reviews">Reviews</a>
             <a href="#faq">FAQ</a>
-            <a href="http://moneyaftergraduation.thinkific.com/users/sign_in">Sign In</a>
+            <a style="display: none;" href="http://moneyaftergraduation.thinkific.com/users/sign_in">Sign In</a>
         </nav>
     </div>
     <header class="flex">
@@ -44,17 +44,17 @@
                 <a href="#curriculum">Curriculum</a>
                 <a href="#reviews">Reviews</a>
                 <a href="#faq">FAQ</a>
-                <a id="sign-in" href="http://moneyaftergraduation.thinkific.com/users/sign_in">Sign In</a>
-                <a id="enroll-option" class="btn sm hide" href="#enroll">Enroll</a>
+                <a style="display: none;" id="sign-in" href="http://moneyaftergraduation.thinkific.com/users/sign_in">Sign In</a>
+                <a id="enroll-option" class="btn sm hide notify" href="#">Notify Me</a>
             </nav>
         </div>
     </header>
     <div class="hero flex">
         <div class="tagline flex">
             <h1>Your guide to creating a safe and profitable $100,000 portfolio.</h1>
-            <h2>An investing eCourse by Bridget Casey, MBA (Finance). Creator of Money After Graduation, and featured in Business Insider, Time, Questrade and more.</h2>
+            <h2>An investing eCourse by Bridget Casey, MBA (Finance). Enrolment opens February 4-17. Sign up to be notified when you can register.</h2>
             <a id="watch-video" class="btn flex" href="#">Watch Video</a>
-            <a class="btn hollow flex" href="#enroll">Enroll Now</a>
+            <a class="btn hollow flex notify" href="#">Notify Me</a>
         </div>
         <div class="bridget">
             <div class="grd"></div>
@@ -130,15 +130,15 @@
                 <div class="half price">
                     <h3>$379 USD</h3>
                     <h4>One time easy payment</h4>
-                    <a class="btn" href="#">Enroll Now</a>
+                    <a class="btn notify" href="#">Notify Me</a>
                 </div>
                 <div class="half price">
                     <h3>$199 USD</h3>
                     <h4>Two easy monthly payments</h4>
-                    <a class="btn" href="#">Enroll Now</a>
+                    <a class="btn notify" href="#">Notify Me</a>
                 </div>
             </div>
-            <p><strong>Registration closes in <span id="demo"></span></strong></p>
+            <p><strong>Registration opens in <span id="demo"></span></strong></p>
             <p class="footnote"><i class="mdi mdi-approval sm"></i> 14 day money back guarantee. No questions asked.</p>
         </div>
         <div id="curriculum" class="content">
@@ -253,6 +253,7 @@
             <p>Copyright &copy; 2018 Money After Graduation</p>
         </footer>
     </div>
-<script src="js/site.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/site.js"></script>
 </body>
 </html>

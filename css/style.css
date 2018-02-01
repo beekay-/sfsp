@@ -471,7 +471,7 @@ footer {
 
 #overlay {
     background: rgba(24, 157, 173, 0.85);
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
@@ -480,10 +480,6 @@ footer {
     -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
     height: 100%;
-}
-
-#overlay.fixed {
-    position: fixed;
 }
 
 #modal {
@@ -508,7 +504,7 @@ footer {
     height: 100%;
 }
 
-#modal.info, #modal.info-lg {
+#modal.info, #modal.info-sm, #modal.info-lg {
     text-align: left;
     padding: 1em;
     background: #fff;
@@ -517,6 +513,12 @@ footer {
     height: 80%;
     width: 40%;
     border-radius: 3px;
+    -webkit-overflow-scrolling: touch;
+}
+
+#modal.info-sm {
+    width: 40%;
+    height: 25%;
 }
 
 #modal.info-lg {
@@ -543,6 +545,64 @@ footer {
 
 #modal p {
     font-size: 0.875em;
+}
+
+/* FORM */
+
+.ck_form.ck_naked .ck_subscribe_button {
+    border-radius: 2px !important;
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+    padding: 0.5em 1em !important;
+    font-size: 0.875em !important;
+    background: #ffd100 !important;
+    color: #354a4d !important;
+    transition: background 0.2s !important;
+    border-radius: 3px !important;
+    display: block !important;
+    font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
+}
+
+.ck_form.ck_naked .ck_subscribe_button:hover {
+    background: #ffde00 !important;
+}
+
+.ck_form.ck_naked .ck_form_fields {
+    padding: 0 !important;
+}
+
+.ck_form.ck_naked input[type="text"], .ck_form.ck_naked input[type="email"] {
+    width: 50% !important;
+    background: rgba(0, 0, 0, 0.05) !important;
+    font-size: 0.875em !important;
+    font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
+    border: 0 !important;
+    margin-right: 0 !important;
+    border-radius: 3px !important;
+    padding: 10px !important;
+    height: auto !important;
+    margin-top: 0 !important;
+}
+
+.ck_form.ck_naked input[type="email"] {
+    margin-left: 5px !important;
+}
+
+.ck_control_group.ck_email_field_group {
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+#ck_success_msg {
+    padding: 10px !important;
+    border: 0 !important;
+    border-radius: 2px !important;
+    color: #354a4d !important;
+    background: #ffd100 !important;
+    font-size: 0.875em !important;
+    line-height: normal !important;
 }
 
 /* ICONS */
@@ -819,7 +879,7 @@ footer {
         background: linear-gradient(to right, rgb(2, 163, 181) 0%, #07acc1 15%, #2db9ce 50%, #0fb3c5 80%, #07adc1 90%, #14aac3 100%)
     }
     .tagline h1 {
-        font-size: 1.625em;
+        font-size: 1.375em;
     }
     .tagline h2, .btn {
         font-size: 0.750em;
@@ -895,12 +955,16 @@ footer {
         width: 90%;
         height: 75%;
     }
+    #modal.info-sm {
+        width: 90%;
+        height: 25%;
+    }
 }
 
 @media screen and (max-width: 23.5em) {
     .bridget {
         background-size: 100%;
-        top: 110px;
+        top: 80px;
     }
     #enroll h1 {
         font-size: 2em;
