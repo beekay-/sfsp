@@ -40,7 +40,7 @@ $(document).ready(function() {
     }
 
     // Set the date we're counting down to
-    var countDownDate = new Date("Feb 4, 2018 23:59:59").getTime();
+    var countDownDate = new Date("Feb 17, 2018 23:59:59").getTime();
 
     // Update the count down every 1 second
     var x = setInterval(function() {
@@ -83,16 +83,16 @@ $(document).ready(function() {
         };
     }
     // Notify Me Modal
-    $('.notify').click(function(e) {
-        overlay.id = 'overlay';
-        overlay.className = '';
-        modal.id = 'modal';
-        modal.className = 'animated fadeInUp visible info-sm';
-        document.body.appendChild(overlay);
-        overlay.appendChild(modal);
-        $('#modal').append("<script async id='_ck_246643' src='https://forms.convertkit.com/246643?v=6'></script>");
-        e.preventDefault();
-    });
+    // $('.notify').click(function(e) {
+    //     overlay.id = 'overlay';
+    //     overlay.className = '';
+    //     modal.id = 'modal';
+    //     modal.className = 'animated fadeInUp visible info-sm';
+    //     document.body.appendChild(overlay);
+    //     overlay.appendChild(modal);
+    //     $('#modal').append("<script async id='_ck_246643' src='https://forms.convertkit.com/246643?v=6'></script>");
+    //     e.preventDefault();
+    // });
     // Curriculum Button
     if (curriculumBtn) {
         curriculumBtn.onclick = function(e) {
