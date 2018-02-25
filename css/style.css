@@ -482,6 +482,10 @@ footer {
     height: 100%;
 }
 
+#overlay.hide {
+    display: none;
+}
+
 #modal {
     height: 80%;
     width: 80%;
