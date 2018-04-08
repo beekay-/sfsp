@@ -173,6 +173,10 @@ nav a:nth-last-child(2) {
     text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
 }
 
+.tagline h2:first-of-type {
+    margin-bottom: 0;
+}
+
 .bridget {
     background: url('../img/bridget-casey.jpg') center right;
     background-repeat: no-repeat;
